@@ -38,27 +38,31 @@ const Government = () => {
   ];
 
   return (
-    <section id="perangkat" className="py-5">
+    <section id="perangkat" className="py-5 bg-light">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center mb-5">
             <h2 className="display-5 fw-bold">Pemerintahan Desa</h2>
-            <div className="section-underline"></div>
+            <div className="section-underline mx-auto"></div>
             <p className="lead">Government Structure</p>
           </div>
         </div>
+
+        {/* Bagian yang sudah diperbaiki framenya */}
         <div className="row justify-content-center">
           {officials.map((official, index) => (
-            <div key={index} className="col-md-3 mb-4">
-              <div className="card-perangkat">
-                <img
-                  src={official.img}
-                  alt={official.name}
-                  className="foto-perangkat"
-                />
-                <div className="info">
-                  <h5 className="fw-bold">{official.name}</h5>
-                  <p className="text-muted small">{official.role}</p>
+            <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div className="card-perangkat text-center shadow-sm h-100">
+                <div className="img-container">
+                  <img
+                    src={official.img}
+                    alt={official.name}
+                    className="foto-perangkat"
+                  />
+                </div>
+                <div className="info p-3">
+                  <h6 className="fw-bold mb-1">{official.name}</h6>
+                  <p className="text-primary small mb-0">{official.role}</p>
                 </div>
               </div>
             </div>
