@@ -7,7 +7,7 @@ const Government = () => {
         role: "KEPALA DESA",
         // Langsung tulis jalurnya sebagai teks, tanpa import
         img: "/perangkat_desa/kepala-desa.jpg",
-      },
+    },
     {
       name: "Ahmad",
       role: "Sekretaris Desa",
@@ -22,6 +22,18 @@ const Government = () => {
       name: "Budi",
       role: "Kaur Umum",
       img: "https://ui-avatars.com/api/?name=Kaur+Umum&background=0D8ABC&color=fff",
+    },
+    {
+        name: "NURUL KAMARIYAH, S.Pd",
+        role: "STAF KASI KESEJATERAAN RAKYAT",
+        // Langsung tulis jalurnya sebagai teks, tanpa import
+        img: "/perangkat_desa/staf-kasi-kesejahteraan.jpg",
+    },
+    {
+        name: "KHOSNOL HATIMAH",
+        role: "KADUS MURTAJIH",
+        // Langsung tulis jalurnya sebagai teks, tanpa import
+        img: "/perangkat_desa/kadus-murtajih.jpg",
     },
   ];
 
