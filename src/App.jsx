@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Government from "./components/Government";
 import Services from "./components/Services";
-import Transparency from "./components/Transparency";
 import Gallery from "./components/Gallery";
 import News from "./components/News";
 import Contact from "./components/Contact";
@@ -37,7 +36,6 @@ function App() {
         <About />
         <Government />
         <Services />
-        <Transparency />
         <Gallery />
         <News />
         <Contact />
