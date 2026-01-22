@@ -45,7 +45,7 @@ const Government = () => {
         {/* Other Officials Grid */}
         <div className="row justify-content-center">
           {officials.slice(1, visibleCount).map((official, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div key={index} className="col-lg-3 col-md-4 col-6 mb-4">
               <div className="card-perangkat text-center shadow-sm h-100 border-0">
                 <div className="img-container">
                   <img
