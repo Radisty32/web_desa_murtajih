@@ -70,7 +70,7 @@ body.antigravity-ui {
 
 /* 1. Top Bar (Bagian Biru Atas) */
 .top-bar {
-    background-color: #003399; /* Biru Tua */
+    background-color: #002244; /* Navy Blue Gelap */
     font-size: 0.85rem;
     position: relative;
     overflow: hidden;
@@ -117,21 +117,24 @@ body.antigravity-ui {
 .navbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #0046ff !important;
+    background-color: #003366 !important; /* Navy Blue Professional */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 /* Styling Link Menu */
 .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #e0e7ff; /* Putih sedikit biru (Soft White) */
     font-size: 0.95rem;
+    font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #003399; /* Biru saat hover/aktif */
+    color: #ffcc00; /* Emas saat hover/aktif */
+    font-weight: 700;
 }
 
 /* Styling Container Judul */
@@ -184,7 +187,7 @@ body.antigravity-ui {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.75));
+    background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.6)); /* Navy Overlay */
     z-index: 1;
 }
 
@@ -211,7 +214,7 @@ body.antigravity-ui {
 .cursor {
     display: inline-block;
     font-weight: bold;
-    color: #0d6efd;
+    color: #ffcc00; /* Ubah kursor jadi emas */
     animation: kedip 0.7s infinite;
     margin-left: 2px;
 }
@@ -262,10 +265,10 @@ body.antigravity-ui {
 
 /* Kotak Biru Tua (Frame) */
 .kepala-desa-frame {
-    background-color: #0d6efd; /* Biru sesuai gambar */
+    background-color: #003366; /* Match Navy Theme */
     padding: 15px 15px 0 15px; /* Padding atas kanan kiri, bawah 0 */
     border-radius: 4px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* White Text */
     text-align: center;
     position: relative;
     z-index: 2;
@@ -351,9 +354,9 @@ body.antigravity-ui {
     FOOTER
 ========================= */
 footer {
-    background-color: #0046ff;
-    color: #cbd5f5;
-    padding: 30px 0;
+    background-color: #002244; /* Darkest Navy */
+    color: #e2e8f0;
+    padding: 40px 0 20px;
     text-align: center;
     font-size: 0.9rem;
 }
