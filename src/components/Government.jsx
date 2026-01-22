@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { siteData } from "../data/content";
 
 const Government = () => {
   const { officials } = siteData.government;
+  const [visibleCount, setVisibleCount] = useState(5); // Show Kepala Desa + 4 others initially
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 4);
+  };
 
   return (
     <section id="perangkat" className="py-5 bg-alt">
@@ -38,7 +44,7 @@ const Government = () => {
 
         {/* Other Officials Grid */}
         <div className="row justify-content-center">
-          {officials.slice(1).map((official, index) => (
+          {officials.slice(1, visibleCount).map((official, index) => (
             <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
               <div className="card-perangkat text-center shadow-sm h-100 border-0">
                 <div className="img-container">
@@ -49,7 +55,7 @@ const Government = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="info p-3">
+                <div className="info p-3 bg-card">
                   <h6
                     className="fw-bold mb-1 text-uppercase"
                     style={{ fontSize: "0.85rem" }}
@@ -64,6 +70,20 @@ const Government = () => {
             </div>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {visibleCount < officials.length && (
+          <div className="row mt-4">
+            <div className="col-12 text-center">
+              <button
+                onClick={handleLoadMore}
+                className="btn btn-outline-primary rounded-pill px-4 py-2"
+              >
+                Lihat Lebih Banyak <i className="bi bi-chevron-down ms-2"></i>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
