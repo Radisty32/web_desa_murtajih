@@ -161,12 +161,12 @@ export const siteData = {
     title: "Galeri Desa",
     subtitle: "Gallery",
     images: [
-      { id: 1, year: "2025", img: 1011 },
-      { id: 2, year: "2025", img: 1012 },
-      { id: 3, year: "2025", img: 1013 },
-      { id: 4, year: "2026", img: 1014 },
-      { id: 5, year: "2026", img: 1015 },
-      { id: 6, year: "2026", img: 1016 },
+      { id: 1, year: "2025", month: "Agustus", title: "Musyawarah Desa", img: 1011 },
+      { id: 2, year: "2025", month: "Agustus", title: "Penyaluran BLT", img: 1012 },
+      { id: 3, year: "2025", month: "Juli", title: "Kerja Bakti Masal", img: 1013 },
+      { id: 4, year: "2026", month: "Januari", title: "Kunjungan Camat", img: 1014 },
+      { id: 5, year: "2026", month: "Februari", title: "Pelatihan UMKM", img: 1015 },
+      { id: 6, year: "2026", month: "Maret", title: "Panen Raya Padi", img: 1016 },
     ],
   },
   news: {
