@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as bootstrap from "bootstrap";
+import { siteData } from "../data/content";
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState("#beranda");
+  const { brand, links } = siteData.navbar;
+
   useEffect(() => {
-    // Tutup menu mobile saat link diklik
+    // 1. Mobile Menu Logic
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", () => {
         const menu = document.getElementById("menu");
@@ -12,7 +16,30 @@ const Navbar = () => {
         }
       });
     });
-  }, []);
+
+    // 2. Scroll Spy Logic
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // Offset for fixed navbar
+
+      links.forEach((link) => {
+        const sectionId = link.href.replace("#", "");
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+          const { offsetTop, offsetHeight } = section;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveLink(link.href);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [links]);
 
   return (
     <nav
@@ -38,37 +65,17 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="menu">
           <ul className="navbar-nav ms-auto align-items-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#beranda">
-                Beranda
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#profil">
-                Profil
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#perangkat">
-                Perangkat
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#berita">
-                Berita
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#galeri">
-                Galeri
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#kontak">
-                Kontak
-              </a>
-            </li>
-
+            {links.map((link, index) => (
+              <li key={index} className="nav-item">
+                <a
+                  className={`nav-link ${activeLink === link.href ? "active" : ""}`}
+                  href={link.href}
+                  onClick={() => setActiveLink(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
