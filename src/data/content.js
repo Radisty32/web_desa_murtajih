@@ -15,7 +15,6 @@ export const siteData = {
       { label: "Pemerintahan", href: "#perangkat" },
       { label: "Layanan", href: "#services" },
       { label: "Galeri", href: "#galeri" },
-      { label: "Berita", href: "#berita" },
       { label: "Kontak", href: "#kontak" },
     ],
   },
