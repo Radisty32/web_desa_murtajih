@@ -19,16 +19,16 @@ const Contact = () => {
                 <div className="col-md-6">
                   <h5 className="fw-bold mb-3">Informasi Kontak</h5>
                   <p>
-                    <i className="bi bi-geo-alt-fill text-warning me-2"></i>Jl.
-                    Raya Murtajih, Desa Murtajih, Kec. Pademawu, Kab. Pamekasan
+                    <i className="bi bi-geo-alt-fill text-warning me-2"></i>
+                    {siteData.contact.address}
                   </p>
                   <p>
                     <i className="bi bi-telephone-fill text-warning me-2"></i>
-                    +62 812-3456-7890
+                    {siteData.contact.phone}
                   </p>
                   <p>
                     <i className="bi bi-envelope-fill text-warning me-2"></i>
-                    info@desamurtajih.go.id
+                    {siteData.contact.email}
                   </p>
                 </div>
                 <div className="col-md-6">
