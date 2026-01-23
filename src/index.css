@@ -1,4 +1,64 @@
 /* =========================
+    THEME VARIABLES
+========================= */
+:root {
+    --color-primary: #003366;
+    /* Navy Blue Professional */
+    --color-dark: #002244;
+    /* Darkest Navy */
+    --color-light: #f8fafc;
+    /* Light Background */
+    --color-text: #1e293b;
+    /* Dark Text */
+    --color-accent: #ffcc00;
+    /* Gold */
+    --color-card-bg: #ffffff;
+    /* White Card */
+    --color-navbar-bg: #003366;
+    --color-footer-bg: #002244;
+    --color-nav-link: #e0e7ff;
+    --color-section-alt: #e2e8f0;
+    /* Light Gray for alternating sections */
+}
+
+[data-theme="dark"] {
+    --color-primary: #3b82f6;
+    /* Brighter Blue for Dark Mode */
+    --color-dark: #0f172a;
+    /* Slate 900 */
+    --color-light: #020617;
+    /* Slate 950 */
+    --color-text: #e2e8f0;
+    /* Light Text */
+    --color-accent: #fbbf24;
+    /* Amber 400 */
+    --color-card-bg: #1e293b;
+    /* Slate 800 */
+    --color-navbar-bg: #0f172a;
+    --color-footer-bg: #020617;
+    --color-nav-link: #cbd5e1;
+    --color-section-alt: #0f172a;
+    /* Dark alternate section */
+}
+
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .text-secondary {
+    color: #94a3b8 !important;
+    /* Lighter gray for dark mode */
+}
+
+/* =========================
+    UTILITIES
+========================= */
+.bg-alt {
+    background-color: var(--color-section-alt) !important;
+}
+
+.bg-card {
+    background-color: var(--color-card-bg) !important;
+}
+
+/* =========================
     RESET & BASE
 ========================= */
 *,
@@ -7,6 +67,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -15,8 +76,8 @@ html {
 
 body.antigravity-ui {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: var(--color-light);
+    color: var(--color-text);
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -27,7 +88,7 @@ body.antigravity-ui {
 #preloader {
     position: fixed;
     inset: 0;
-    background-color: #020617;
+    background-color: var(--color-footer-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,14 +115,19 @@ body.antigravity-ui {
     content: "";
     width: 40%;
     height: 100%;
-    background-color: #38bdf8;
+    background-color: var(--color-accent);
     display: block;
     animation: loading 1.2s ease-in-out infinite;
 }
 
 @keyframes loading {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(250%); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(250%);
+    }
 }
 
 /* =========================
@@ -70,14 +136,15 @@ body.antigravity-ui {
 
 /* 1. Top Bar (Bagian Biru Atas) */
 .top-bar {
-    background-color: #003399; /* Biru Tua */
+    background-color: var(--color-dark);
     font-size: 0.85rem;
     position: relative;
     overflow: hidden;
 }
 
 .warning-text {
-    color: #ffcc00; /* Kuning Emas */
+    color: #ffcc00;
+    /* Kuning Emas */
     letter-spacing: 0.5px;
 }
 
@@ -95,8 +162,13 @@ body.antigravity-ui {
 }
 
 @keyframes marquee-gerak {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
 
 .marquee-container span:hover {
@@ -109,6 +181,7 @@ body.antigravity-ui {
     text-decoration: none;
     transition: opacity 0.3s;
 }
+
 .social-icons a:hover {
     opacity: 0.7;
 }
@@ -117,34 +190,41 @@ body.antigravity-ui {
 .navbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #0046ff !important;
+    background-color: var(--color-navbar-bg) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Styling Link Menu */
 .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #e0e7ff;
+    /* Putih sedikit biru (Soft White) */
     font-size: 0.95rem;
+    font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #003399; /* Biru saat hover/aktif */
+    color: #ffcc00;
+    /* Emas saat hover/aktif */
+    font-weight: 700;
 }
 
 /* Styling Container Judul */
 .judul-desa {
     font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Warna Emas untuk kata "DESA" */
 .judul-desa .text-gold {
     color: #FFD700;
-    margin-right: 5px; /* Jarak dengan kata berikutnya */
+    margin-right: 5px;
+    /* Jarak dengan kata berikutnya */
 }
 
 /* Warna Putih untuk kata "MURTAJIH" */
@@ -184,7 +264,8 @@ body.antigravity-ui {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.75));
+    background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.6));
+    /* Navy Overlay */
     z-index: 1;
 }
 
@@ -211,14 +292,22 @@ body.antigravity-ui {
 .cursor {
     display: inline-block;
     font-weight: bold;
-    color: #0d6efd;
+    color: #ffcc00;
+    /* Ubah kursor jadi emas */
     animation: kedip 0.7s infinite;
     margin-left: 2px;
 }
 
 @keyframes kedip {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 /* =========================
@@ -239,7 +328,8 @@ body.antigravity-ui {
 .card-custom {
     border: none;
     border-radius: 16px;
-    background-color: #ffffff;
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -262,10 +352,13 @@ body.antigravity-ui {
 
 /* Kotak Biru Tua (Frame) */
 .kepala-desa-frame {
-    background-color: #0d6efd; /* Biru sesuai gambar */
-    padding: 15px 15px 0 15px; /* Padding atas kanan kiri, bawah 0 */
+    background-color: #003366;
+    /* Match Navy Theme */
+    padding: 15px 15px 0 15px;
+    /* Padding atas kanan kiri, bawah 0 */
     border-radius: 4px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* White Text */
     text-align: center;
     position: relative;
     z-index: 2;
@@ -283,6 +376,7 @@ body.antigravity-ui {
     border-left: 4px solid #ffcc00;
     z-index: 1;
 }
+
 .kepala-desa-wrapper::after {
     content: "";
     position: absolute;
@@ -297,10 +391,12 @@ body.antigravity-ui {
 
 /* 2. Kartu Perangkat Desa (Grid Bawah) */
 .card-perangkat {
-    background: #fff;
-    border-radius: 8px; /* Sudut sedikit melengkung */
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    border-radius: 8px;
+    /* Sudut sedikit melengkung */
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -310,16 +406,22 @@ body.antigravity-ui {
 
 .foto-perangkat {
     width: 100%;
-    aspect-ratio: 3/4; /* Agar foto proporsional seperti pas foto */
+    aspect-ratio: 3/4;
+    /* Agar foto proporsional seperti pas foto */
     object-fit: cover;
     object-position: top;
 }
 
 .card-perangkat .info {
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
     text-align: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .card-perangkat .info {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Garis bawah judul section */
@@ -343,7 +445,8 @@ body.antigravity-ui {
 .login-card {
     border-radius: 18px;
     border: none;
-    background-color: #ffffff;
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -351,9 +454,28 @@ body.antigravity-ui {
     FOOTER
 ========================= */
 footer {
-    background-color: #0046ff;
-    color: #cbd5f5;
-    padding: 30px 0;
+    background-color: var(--color-footer-bg);
+    color: #e2e8f0;
+    padding: 40px 0 20px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+/* =========================
+    FORM INPUTS (DARK MODE)
+========================= */
+[data-theme="dark"] .form-control {
+    background-color: var(--color-card-bg);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-primary);
+    color: var(--color-text);
 }

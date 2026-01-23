@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = ["slider/foto1.jpg", "slider/foto2.jpg", "slider/foto3.jpg"];
+  const slides = ["/images/slider/foto1.jpg", "/images/slider/foto2.jpg", "/images/slider/foto3.jpg"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,7 +13,7 @@ const Hero = () => {
   }, [slides.length]);
 
   return (
-    <section className="hero-slider">
+    <section id="beranda" className="hero-slider">
       {slides.map((slide, index) => (
         <div
           key={index}

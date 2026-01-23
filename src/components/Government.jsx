@@ -1,99 +1,16 @@
+import { useState } from "react";
+import { siteData } from "../data/content";
+
 const Government = () => {
-  const officials = [
-    {
-      name: "H. MOHAMMAD BAHARUDDIN",
-      role: "KEPALA DESA",
-      img: "/perangkat_desa/kepala-desa.jpg",
-    },
-    {
-      name: "SUDAHNAN SAFRAJI, ST",
-      role: "SEKERTARIS DESA",
-      img: "https://ui-avatars.com/api/?name=Sekretaris&background=0D8ABC&color=fff",
-    },
-    {
-      name: "TSUROYYA ALIYAH",
-      role: "KAUR TATA USAHA/UMUM",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "FITRIATUS SHOLIHAH, S.Pd",
-      role: "KAUR KEUANGAN",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "FAHRUR ROSIANTO",
-      role: "KAUR PERENCANAAN",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "SYARIFATUL LAILI, S.Pd",
-      role: "KASI PEMERINTAHAN",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "CHAIRIL FAJAR, SE",
-      role: "KASI KESEJAHTERAAN RAKYAT",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "NURUL KAMARIYAH, S.Pd",
-      role: "STAF KASI KESEJATERAAN RAKYAT",
-      img: "/perangkat_desa/staf-kasi-kesejahteraan.jpg",
-    },
-    {
-      name: "M. MUDHAR, S.Pd",
-      role: "KASI PELAYANAN",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "IKHWAN MAULANA, S.Pd",
-      role: "STAF KASI PELAYANAN",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "KHOSNOL HATIMAH",
-      role: "KADUS MURTAJIH",
-      img: "/perangkat_desa/kadus-murtajih.jpg",
-    },
-    {
-      name: "RONI CAHYONO, S.Pd",
-      role: "KADUS SOLOH DAJAH",
-      img: "/perangkat_desa/kadus-soloh-dajah.jpg",
-    },
-    {
-      name: "NURUL ALIMUDDIN, S.Pd",
-      role: "KADUS SOLOH TIMUR",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "MOHAMMAD NOER FAISAL",
-      role: "KADUS NANGGIRIK",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "ABD. HALIM",
-      role: "KADUS SOLOH LAOK",
-      img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
-    },
-    {
-      name: "ELLY FITRIASIH",
-      role: "KADUS OBERAN",
-      img: "/perangkat_desa/kadus-oberan.jpg",
-    },
-    {
-      name: " SRI SUHARTATIK",
-      role: "KADUS TELAGA SARI",
-      img: "/perangkat_desa/kadus-telaga-sari.jpg",
-    },
-    {
-      name: "MUHLIS ADI PUTRA",
-      role: "KADUS PAO GADING",
-      img: "/perangkat_desa/kadus-pao-gading.jpg",
-    },
-  ];
+  const { officials } = siteData.government;
+  const [visibleCount, setVisibleCount] = useState(5); // Show Kepala Desa + 4 others initially
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 4);
+  };
 
   return (
-    <section id="perangkat" className="py-5 bg-light">
+    <section id="perangkat" className="py-5 bg-alt">
       <div className="container">
         {/* Header Section */}
         <div className="row">
@@ -105,18 +22,40 @@ const Government = () => {
         </div>
 
         {/* Officials Grid */}
+        {/* Kepala Desa Section */}
+        <div className="row justify-content-center mb-5">
+          <div className="col-12 text-center">
+            <div className="kepala-desa-wrapper">
+              <div className="kepala-desa-frame card-perangkat p-0 border-0 shadow">
+                <img
+                  src={officials[0].img}
+                  alt={officials[0].name}
+                  className="foto-perangkat"
+                  style={{ maxWidth: "300px" }}
+                />
+                <div className="info p-3 bg-card">
+                  <h5 className="fw-bold mb-1">{officials[0].name}</h5>
+                  <p className="text-primary fw-bold mb-0">{officials[0].role}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Other Officials Grid */}
         <div className="row justify-content-center">
-          {officials.map((official, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+          {officials.slice(1, visibleCount).map((official, index) => (
+            <div key={index} className="col-lg-3 col-md-4 col-6 mb-4">
               <div className="card-perangkat text-center shadow-sm h-100 border-0">
                 <div className="img-container">
                   <img
                     src={official.img}
                     alt={official.name}
                     className="foto-perangkat"
+                    loading="lazy"
                   />
                 </div>
-                <div className="info p-3">
+                <div className="info p-3 bg-card">
                   <h6
                     className="fw-bold mb-1 text-uppercase"
                     style={{ fontSize: "0.85rem" }}
@@ -131,6 +70,20 @@ const Government = () => {
             </div>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {visibleCount < officials.length && (
+          <div className="row mt-4">
+            <div className="col-12 text-center">
+              <button
+                onClick={handleLoadMore}
+                className="btn btn-outline-primary rounded-pill px-4 py-2"
+              >
+                Lihat Lebih Banyak <i className="bi bi-chevron-down ms-2"></i>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

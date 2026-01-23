@@ -5,7 +5,6 @@ import About from "./components/About";
 import Government from "./components/Government";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
-import News from "./components/News";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
@@ -37,7 +36,6 @@ function App() {
         <Government />
         <Services />
         <Gallery />
-        <News />
         <Contact />
       </main>
       <Footer />
