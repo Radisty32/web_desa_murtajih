@@ -62,12 +62,12 @@ export const siteData = {
       {
         name: "FITRIATUS SHOLIHAH, S.Pd",
         role: "KAUR KEUANGAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kaur-keuangan.jpg",
       },
       {
         name: "FAHRUR ROSIANTO",
         role: "KAUR PERENCANAAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kaur-perencanaan.jpg",
       },
       {
         name: "SYARIFATUL LAILI, S.Pd",
@@ -77,7 +77,7 @@ export const siteData = {
       {
         name: "CHAIRIL FAJAR, SE",
         role: "KASI KESEJAHTERAAN RAKYAT",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kasi-kesejahteraan.jpg",
       },
       {
         name: "NURUL KAMARIYAH, S.Pd",
@@ -87,7 +87,7 @@ export const siteData = {
       {
         name: "M. MUDHAR, S.Pd",
         role: "KASI PELAYANAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kasi-pelayanan.jpg",
       },
       {
         name: "IKHWAN MAULANA, S.Pd",
