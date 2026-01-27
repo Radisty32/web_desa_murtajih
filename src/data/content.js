@@ -4,8 +4,9 @@ export const siteData = {
     title: "Desa Murtajih - Smart Village",
     description:
       "Website Resmi Desa Murtajih, Kecamatan Pademawu, Kabupaten Pamekasan. Menuju Desa Mandiri, Sejahtera, dan Berbudaya.",
-    keywords: "Desa Murtajih, Pamekasan, Pademawu, Desa Pintar, Smart Village, Website Desa",
-    author: "Pemerintah Desa Murtajih"
+    keywords:
+      "Desa Murtajih, Pamekasan, Pademawu, Desa Pintar, Smart Village, Website Desa",
+    author: "Pemerintah Desa Murtajih",
   },
   navbar: {
     brand: "Desa Murtajih",
@@ -25,19 +26,20 @@ export const siteData = {
     slides: [
       "/images/slider/foto1.jpg",
       "/images/slider/foto2.jpg",
-      "/images/slider/foto3.jpg"
-    ]
+      "/images/slider/foto3.jpg",
+    ],
   },
   about: {
     title: "Tentang Kami",
     subtitle: "The Profile",
     history:
-      "Desa Murtajih adalah salah satu desa di Kecamatan Pademawu, Kabupaten Pamekasan. Desa kami memiliki sejarah panjang dalam menjaga tradisi sekaligus beradaptasi dengan kemajuan teknologi.",
-    visi: "Terwujudnya Desa Murtajih yang Mandiri, Aman, dan Sejahtera.",
+      "Berdasarkan data kependudukan terbaru dari DKB Semester 1 Tahun 2025 Dinas Kependudukan dan Pencatatan Sipil (Dukcapil) Kabupaten Pamekasan, Desa Murtajih yang terletak di Kecamatan Pademawu memiliki jumlah penduduk sebanyak 6.295 jiwa dengan komposisi gender yang terdiri dari 3.016 laki-laki dan 3.279 perempuan yang tersebar dalam 1.887 Kepala Keluarga. Secara administratif, wilayah desa ini mencakup 8 dusun, 8 RW, dan 17 RT, dengan profil sosial-ekonomi yang menunjukkan adanya 3.478 jiwa dalam kategori angkatan kerja tetap. Saat ini, Desa Murtajih terus memperkuat sistem informasi desa melalui digitalisasi data untuk meningkatkan akurasi layanan administrasi serta validasi bantuan sosial bagi masyarakat.",
+    visi: "Terwujudnya Desa Murtajih yang mandiri, sejahtera, dan religius melalui peningkatan tata kelola pemerintahan yang transparan dan partisipatif, serta penguatan potensi lokal.",
     misi: [
-      "Meningkatkan kualitas pelayanan publik.",
-      "Mengembangkan potensi ekonomi lokal.",
-      "Menjaga kelestarian lingkungan dan budaya.",
+      "Meningkatkan kualitas pelayanan publik dan tata kelola pemerintahan desa yang akuntabel serta transparan.",
+      "Membangun infrastruktur desa yang merata dan berkelanjutan untuk menunjang aktivitas perekonomian.",
+      "Peningkatan ekonomi masyarakat melalui pemberdayaan UMKM dan potensi pertanian/potensi lokal.",
+      "Mengembangkan potensi ekonomi lokal dan Badan Usaha Milik Desa (BUMDes).",
     ],
   },
   government: {
@@ -52,32 +54,32 @@ export const siteData = {
       {
         name: "SUDAHNAN SAFRAJI, ST",
         role: "SEKERTARIS DESA",
-        img: "https://ui-avatars.com/api/?name=Sekretaris&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/sekertaris-desa.jpg",
       },
       {
         name: "TSUROYYA ALIYAH",
         role: "KAUR TATA USAHA/UMUM",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kaur-tata-usaha.jpg",
       },
       {
         name: "FITRIATUS SHOLIHAH, S.Pd",
         role: "KAUR KEUANGAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kaur-keuangan.jpg",
       },
       {
         name: "FAHRUR ROSIANTO",
         role: "KAUR PERENCANAAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kaur-perencanaan.jpg",
       },
       {
         name: "SYARIFATUL LAILI, S.Pd",
         role: "KASI PEMERINTAHAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kasi-pemerintahan.jpg",
       },
       {
         name: "CHAIRIL FAJAR, SE",
         role: "KASI KESEJAHTERAAN RAKYAT",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kasi-kesejahteraan-rakyat.jpg",
       },
       {
         name: "NURUL KAMARIYAH, S.Pd",
@@ -87,12 +89,12 @@ export const siteData = {
       {
         name: "M. MUDHAR, S.Pd",
         role: "KASI PELAYANAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kasi-pelayanan.jpg",
       },
       {
         name: "IKHWAN MAULANA, S.Pd",
         role: "STAF KASI PELAYANAN",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/staf-kasi-pelayanan.jpg",
       },
       {
         name: "KHOSNOL HATIMAH",
@@ -107,17 +109,17 @@ export const siteData = {
       {
         name: "NURUL ALIMUDDIN, S.Pd",
         role: "KADUS SOLOH TIMUR",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kadus-soloh-timur.jpg",
       },
       {
         name: "MOHAMMAD NOER FAISAL",
         role: "KADUS NANGGIRIK",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kadus-nangirik.jpg",
       },
       {
         name: "ABD. HALIM",
         role: "KADUS SOLOH LAOK",
-        img: "https://ui-avatars.com/api/?name=Kaur+Keuangan&background=0D8ABC&color=fff",
+        img: "/perangkat_desa/kadus-soloh-laok.jpg",
       },
       {
         name: "ELLY FITRIASIH",
@@ -143,7 +145,7 @@ export const siteData = {
       {
         icon: "bi-file-earmark-text",
         title: "Administrasi Kependudukan",
-        desc: "Pengurusan KTP, KK, dan Surat Pindah.",
+        desc: "Pengurusan AKte Kelahiran, KK, dan Surat Pindah.",
       },
       {
         icon: "bi-envelope-paper",
@@ -161,6 +163,7 @@ export const siteData = {
     title: "Galeri Desa",
     subtitle: "Gallery",
     images: [
+
       { id: 1, year: "2025", month: "Agustus", title: "Musyawarah Desa", img: 1011 },
       { id: 2, year: "2025", month: "Agustus", title: "Penyaluran BLT", img: 1012 },
       { id: 3, year: "2025", month: "Juli", title: "Kerja Bakti Masal", img: 1013 },
@@ -173,6 +176,47 @@ export const siteData = {
         month: "Januari",
         title: "Pembinaan Limas 2025 triwulan 1",
         img: "/kegiatan/pembinaan-limas-2025-triwulan-1.jpeg",
+      {
+        id: 1,
+        year: "2025",
+        month: "Agustus",
+        title: "Musyawarah Desa",
+        img: 1011,
+      },
+      {
+        id: 2,
+        year: "2025",
+        month: "Agustus",
+        title: "Penyaluran BLT",
+        img: 1012,
+      },
+      {
+        id: 3,
+        year: "2025",
+        month: "Juli",
+        title: "Kerja Bakti Masal",
+        img: 1013,
+      },
+      {
+        id: 4,
+        year: "2026",
+        month: "Januari",
+        title: "Kunjungan Camat",
+        img: 1014,
+      },
+      {
+        id: 5,
+        year: "2026",
+        month: "Februari",
+        title: "Pelatihan UMKM",
+        img: 1015,
+      },
+      {
+        id: 6,
+        year: "2026",
+        month: "Maret",
+        title: "Panen Raya Padi",
+        img: 1016,
       },
     ],
   },
@@ -198,7 +242,8 @@ export const siteData = {
     address: "Jl. Raya Murtajih, Desa Murtajih, Kec. Pademawu, Kab. Pamekasan",
     phone: "+62 821-3538-6707",
     email: "murtajih.desa2017@gmail.com",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6494434303295!2d113.50587867403944!3d-7.166461670316632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd77dbdf18f8727%3A0x80bdb184246562cd!2sBalai%20Desa%20Murtajih.!5e0!3m2!1sid!2sid!4v1768721835953!5m2!1sid!2sid"
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6494434303295!2d113.50587867403944!3d-7.166461670316632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd77dbdf18f8727%3A0x80bdb184246562cd!2sBalai%20Desa%20Murtajih.!5e0!3m2!1sid!2sid!4v1768721835953!5m2!1sid!2sid",
   },
   footer: {
     text: "© 2026 Desa Murtajih. All rights reserved.",
