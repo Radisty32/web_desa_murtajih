@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { siteData } from "../data/content.js";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = ["/images/slider/foto1.jpg", "/images/slider/foto2.jpg", "/images/slider/foto3.jpg"];
+  const slides = siteData.hero.slides;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,16 +28,12 @@ const Hero = () => {
       <div className="hero-content container">
         <div className="row">
           <div className="col-lg-8">
-            <h1 className="display-4 fw-bold mb-4">
-              Selamat Datang di
-              <br />
-              <span className="text-warning">Desa Murtajih</span>
-            </h1>
+            <h1 className="display-4 fw-bold mb-4" dangerouslySetInnerHTML={{ __html: siteData.hero.title }} />
             <p className="lead mb-4">
-              Menuju Desa Mandiri, Sejahtera, dan Berbudaya.
+              {siteData.hero.subtitle}
             </p>
             <a href="#profil" className="btn btn-warning btn-lg px-4 py-2">
-              Jelajahi Desa
+              {siteData.hero.cta}
             </a>
           </div>
         </div>
