@@ -220,8 +220,8 @@ export const siteData = {
         year: "2026",
         month: "Januari",
         title: "Penyaluran Bantuan Bencana Alam Dari BPBD",
-        img: "/kegiatan/penyaluran-bantuan-bencana-alam-dari-bpbd.jpeg"
-      }
+        img: "/kegiatan/penyaluran-bantuan-bencana-alam-dari-bpbd.jpeg",
+      },
     ],
   },
   news: {
@@ -249,10 +249,11 @@ export const siteData = {
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6494434303295!2d113.50587867403944!3d-7.166461670316632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd77dbdf18f8727%3A0x80bdb184246562cd!2sBalai%20Desa%20Murtajih.!5e0!3m2!1sid!2sid!4v1768721835953!5m2!1sid!2sid",
     social: {
-      instagram: "https://instagram.com/desa_murtajih",
-      tiktok: "https://tiktok.com/@desa_murtajih",
-      youtube: "https://youtube.com/@desa_murtajih",
-      facebook: "https://facebook.com/desa_murtajih",
+      instagram:
+        "https://www.instagram.com/pemdesmurtajih?igsh=ODN4cHRuMzc0amho",
+      tiktok: "https://www.tiktok.com/@desa.murtajih2?_r=1&_t=ZS-93PgM7tJarZ",
+      youtube: "https://youtube.com/@desamurtajih-pe4yv?si=HnRFBBASkGlJfahs",
+      facebook: "https://www.facebook.com/share/1DLNFDpdpk/",
     },
   },
   footer: {
