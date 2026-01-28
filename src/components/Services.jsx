@@ -32,7 +32,22 @@ const Services = () => {
         <div className="row">
           {services.map((service, index) => (
             <div key={index} className="col-md-4 mb-4">
-              <div className="card-custom text-center p-4">
+              <div
+                className="card-custom text-center p-4"
+                style={
+                  service.title === "Aduan Masyarakat"
+                    ? { cursor: "pointer" }
+                    : {}
+                }
+                onClick={
+                  service.title === "Aduan Masyarakat"
+                    ? () =>
+                        document
+                          .getElementById("kontak")
+                          .scrollIntoView({ behavior: "smooth" })
+                    : undefined
+                }
+              >
                 <i className={`bi ${service.icon} fs-1 text-warning mb-3`}></i>
                 <h5 className="fw-bold">{service.title}</h5>
                 <p className="text-muted">{service.desc}</p>
