@@ -34,12 +34,16 @@ export const siteData = {
     subtitle: "The Profile",
     history:
       "Berdasarkan data kependudukan terbaru dari DKB Semester 1 Tahun 2025 Dinas Kependudukan dan Pencatatan Sipil (Dukcapil) Kabupaten Pamekasan, Desa Murtajih yang terletak di Kecamatan Pademawu memiliki jumlah penduduk sebanyak 6.295 jiwa dengan komposisi gender yang terdiri dari 3.016 laki-laki dan 3.279 perempuan yang tersebar dalam 1.887 Kepala Keluarga. Secara administratif, wilayah desa ini mencakup 8 dusun, 8 RW, dan 17 RT, dengan profil sosial-ekonomi yang menunjukkan adanya 3.478 jiwa dalam kategori angkatan kerja tetap. Saat ini, Desa Murtajih terus memperkuat sistem informasi desa melalui digitalisasi data untuk meningkatkan akurasi layanan administrasi serta validasi bantuan sosial bagi masyarakat.",
-    visi: "Terwujudnya Desa Murtajih yang mandiri, sejahtera, dan religius melalui peningkatan tata kelola pemerintahan yang transparan dan partisipatif, serta penguatan potensi lokal.",
+    visi: "Cita-cita masyarakat Desa Murtajih Kecamatan Pademawu Pamekasan dalam proses pembangunan Desa adalah mewujudkan masyarakat yang sejahtera berkualitas. Cita-cita tersebut menekankan pada peningkatan sumber daya manusua yang tangguh dan berdaya. Hal ini sesuai dengan visinya, yaitu: Terciptanya Masyarakat Desa Murtajih Yang Sejahtera, Hidup Sehat, Beriman Dan Berpendidikan.",
     misi: [
-      "Meningkatkan kualitas pelayanan publik dan tata kelola pemerintahan desa yang akuntabel serta transparan.",
-      "Membangun infrastruktur desa yang merata dan berkelanjutan untuk menunjang aktivitas perekonomian.",
-      "Peningkatan ekonomi masyarakat melalui pemberdayaan UMKM dan potensi pertanian/potensi lokal.",
-      "Mengembangkan potensi ekonomi lokal dan Badan Usaha Milik Desa (BUMDes).",
+      "Membangun tata pemerintahan desa yang baik, berwibawa sehingga dapat mendorong pertumbuhan ekonomi (economic growv) masyarakat.",
+      "Meningkatakan rasa keimanan dan ketaqwaan terhadap Tuhan Yang Maha Esa dengan senantiasa berpedoman pada ajajaran - ajajaran agama.",
+      "Meningkatakan kualitas yang berbasis lingkungan.",
+      "Mengelola keamanan, ketertiban dan meletakkan hukum sebagai stabilitas dan kerukunan masyarakat desa dengan dasar iman dan takwa kepada ALLAH SWT.",
+      "Meningkatkan mutu dan pelayanan pendidikan untuk masyarakat.",
+      "Menumbuh kembangkan ekonomi kerakyatan.",
+      "Mengembangkan solidaritas antar tokoh masyarakat dan semua komponen masyarakat untuk membangun desa yang berlandaskan moral serta menjungjung tinggi nilai-nilai agama.",
+      "Membangun dan mendorong usaha-usaha optimalisasi sektor pertanian, perkebunan dan peternakan.",
     ],
   },
   government: {
@@ -174,7 +178,8 @@ export const siteData = {
         id: 9,
         year: "2025",
         month: "Mei",
-        title: "Musyawarah Desa Khusus Pembentukan Koperasi Desa Merah Putih Desa Murtajih",
+        title:
+          "Musyawarah Desa Khusus Pembentukan Koperasi Desa Merah Putih Desa Murtajih",
         img: [
           "/kegiatan/MUSYAWARAH-DESA-KHUSUS-PEMBENTUKAN-KOPERASI-DESA-MERAH-PUTIH-DESA-MURTAJIH/WhatsApp Image 2026-01-23 at 15.34.27.jpeg",
           "/kegiatan/MUSYAWARAH-DESA-KHUSUS-PEMBENTUKAN-KOPERASI-DESA-MERAH-PUTIH-DESA-MURTAJIH/WhatsApp Image 2026-01-23 at 15.34.28 (1).jpeg",
