@@ -171,6 +171,17 @@ export const siteData = {
         img: "/kegiatan/pembinaan-limas-2025-triwulan-1.jpeg",
       },
       {
+        id: 9,
+        year: "2025",
+        month: "Mei",
+        title: "Musyawarah Desa Khusus Pembentukan Koperasi Desa Merah Putih Desa Murtajih",
+        img: [
+          "/kegiatan/MUSYAWARAH-DESA-KHUSUS-PEMBENTUKAN-KOPERASI-DESA-MERAH-PUTIH-DESA-MURTAJIH/WhatsApp Image 2026-01-23 at 15.34.27.jpeg",
+          "/kegiatan/MUSYAWARAH-DESA-KHUSUS-PEMBENTUKAN-KOPERASI-DESA-MERAH-PUTIH-DESA-MURTAJIH/WhatsApp Image 2026-01-23 at 15.34.28 (1).jpeg",
+          "/kegiatan/MUSYAWARAH-DESA-KHUSUS-PEMBENTUKAN-KOPERASI-DESA-MERAH-PUTIH-DESA-MURTAJIH/WhatsApp Image 2026-01-23 at 15.34.28.jpeg",
+        ],
+      },
+      {
         id: 8,
         year: "2025",
         month: "Juni",
