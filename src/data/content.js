@@ -219,6 +219,19 @@ export const siteData = {
         title: "Panen Raya Padi",
         img: 1016,
       },
+      {
+        id: 8,
+        year: "2025",
+        month: "Juni",
+        title: "Penyaluran BLT Tahap IV, V, VI",
+        img: [
+          "/kegiatan/Penyaluran-blt-tahap-empat-lima-enam/WhatsApp Image 2026-01-23 at 15.34.16.jpeg",
+          "/kegiatan/Penyaluran-blt-tahap-empat-lima-enam/WhatsApp Image 2026-01-23 at 15.34.18.jpeg",
+          "/kegiatan/Penyaluran-blt-tahap-empat-lima-enam/WhatsApp Image 2026-01-23 at 15.34.20.jpeg",
+          "/kegiatan/Penyaluran-blt-tahap-empat-lima-enam/WhatsApp Image 2026-01-23 at 15.34.23 (1).jpeg",
+          "/kegiatan/Penyaluran-blt-tahap-empat-lima-enam/WhatsApp Image 2026-01-23 at 15.34.23.jpeg",
+        ],
+      },
     ],
   },
   news: {
