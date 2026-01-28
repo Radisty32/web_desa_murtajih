@@ -212,8 +212,16 @@ export const siteData = {
           "/kegiatan/musyawarah-dusun-bulan-tujuh-2025/musyawarah_dusun_solo_timur.jpeg",
           "/kegiatan/musyawarah-dusun-bulan-tujuh-2025/musyawarah_dusun_soloh_laok.jpeg",
           "/kegiatan/musyawarah-dusun-bulan-tujuh-2025/musyawarah_dusun_telaga_sari.jpeg",
+          "/kegiatan/musyawarah-dusun-bulan-tujuh-2025/penyaluran-bantuan-bencana-alam-dari-bpbd.jpeg",
         ],
       },
+      {
+        id: 11,
+        year: "2026",
+        month: "Januari",
+        title: "Penyaluran Bantuan Bencana Alam Dari BPBD",
+        img: "/kegiatan/penyaluran-bantuan-bencana-alam-dari-bpbd.jpeg"
+      }
     ],
   },
   news: {
