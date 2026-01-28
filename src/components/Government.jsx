@@ -5,7 +5,7 @@ const Government = () => {
   const { officials } = siteData.government;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(3);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const sliderRef = useRef(null);
   const autoPlayRef = useRef(null);
   const touchStartX = useRef(0);
@@ -31,7 +31,8 @@ const Government = () => {
   // Calculate total slides needed
   const totalSlides = Math.ceil((officials.length - 1) / slidesPerView); // -1 because Kepala Desa is separate
 
-  // Auto-play functionality
+  // Auto-play functionality REMOVED
+  /*
   useEffect(() => {
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
@@ -43,11 +44,12 @@ const Government = () => {
 
     return () => clearInterval(autoPlayRef.current);
   }, [isAutoPlaying, totalSlides]);
+  */
 
   // Touch handlers for swipe
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
-    setIsAutoPlaying(false);
+    // setIsAutoPlaying(false);
   };
 
   const handleTouchMove = (e) => {
@@ -65,26 +67,26 @@ const Government = () => {
       setCurrentSlide(currentSlide - 1);
     }
 
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   // Navigation functions
   const goToSlide = (index) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // setIsAutoPlaying(false);
+    // setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // setIsAutoPlaying(false);
+    // setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // setIsAutoPlaying(false);
+    // setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   // Get officials for current slide
