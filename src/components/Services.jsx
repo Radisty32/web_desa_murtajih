@@ -5,12 +5,12 @@ const Services = () => {
     {
       icon: "bi-file-earmark-text",
       title: "Administrasi Kependudukan",
-      desc: "Pengurusan Akte Kelahiran, KK, dan Surat Pindah.",
+      desc: "Pengurusan Kartu Identitas Anak (KIA), Kartu Keluarga (KK),Akta Kelahiran, Akta Kematian, dan Domisili.",
     },
     {
       icon: "bi-envelope-paper",
       title: "Surat Pengantar",
-      desc: "Surat pengantar SKCK, Nikah, dan Domisili.",
+      desc: "Surat pengantar SKCK, Surat Keterangan Tidak Mampu (SKTM), Surat Keterangan Usaha, dan Surat Keterangan Umum.",
     },
     {
       icon: "bi-chat-dots",
