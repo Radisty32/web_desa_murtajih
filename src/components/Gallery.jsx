@@ -9,6 +9,7 @@ const Gallery = () => {
   const [modalImages, setModalImages] = useState([]);
   const [modalTitle, setModalTitle] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
 
   // Get unique years and months for filter options
   const years = useMemo(() => {
@@ -47,6 +48,15 @@ const Gallery = () => {
     const monthMatch = selectedMonth === "Semua" || item.month === selectedMonth;
     return yearMatch && monthMatch;
   });
+
+  // Reset visibleCount when filters change
+  React.useEffect(() => {
+    setVisibleCount(3);
+  }, [selectedYear, selectedMonth]);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
 
   return (
     <section id="galeri" className="py-5 bg-alt">
@@ -95,7 +105,7 @@ const Gallery = () => {
         {/* Gallery Grid */}
         <div className="row">
           {filteredImages.length > 0 ? (
-            filteredImages.map((item) => {
+            filteredImages.slice(0, visibleCount).map((item) => {
               const imgSrc = Array.isArray(item.img) ? item.img[0] : (typeof item.img === "string" ? item.img : `https://picsum.photos/400/300?random=${item.img}`);
               const hasMultiple = Array.isArray(item.img) && item.img.length > 1;
               return (
@@ -143,6 +153,17 @@ const Gallery = () => {
             </div>
           )}
         </div>
+
+        {/* Load More Button */}
+        {filteredImages.length > visibleCount && (
+          <div className="row mt-4">
+            <div className="col-12 text-center">
+              <button className="btn btn-outline-primary px-5 rounded-pill hover-scale" onClick={handleLoadMore}>
+                Lihat Lebih Banyak <i className="bi bi-arrow-down ms-2"></i>
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Modal for Image Carousel */}
         {showModal && (
