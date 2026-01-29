@@ -282,6 +282,27 @@ export const siteData = {
         title: "Rapat Bumdes Januari 2025",
         img: "/kegiatan/rapat-bumdes-januari-2025.jpeg",
       },
+      {
+        id: 19,
+        year: "2026",
+        month: "Januari",
+        title: "Kegiatan Posyandu Januari 2026",
+        img: [
+          "/kegiatan/posyandu-januari2026/WhatsApp Image 2026-01-29 at 20.28.38.jpeg",
+          "/kegiatan/posyandu-januari2026/WhatsApp Image 2026-01-29 at 20.28.39.jpeg",
+        ],
+      },
+      {
+        id: 20,
+        year: "2026",
+        month: "Januari",
+        title: "Pelantikan PKK Desa Murtajih Januari 2026",
+        img: [
+          "/kegiatan/pelantikan-pkk-januari-2026/WhatsApp Image 2026-01-29 at 20.26.37.jpeg",
+          "/kegiatan/pelantikan-pkk-januari-2026/WhatsApp Image 2026-01-29 at 20.26.38.jpeg",
+          "/kegiatan/pelantikan-pkk-januari-2026/WhatsApp Image 2026-01-29 at 20.26.59.jpeg",
+        ],
+      },
     ],
   },
   news: {
