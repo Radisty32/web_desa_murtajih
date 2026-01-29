@@ -82,7 +82,7 @@ export const siteData = {
         img: "/perangkat_desa/kaur-keuangan.jpg",
       },
       {
-        name: "FAHRUR ROSIANTO",
+        name: "FAHRUR ROSIANTO, S.T",
         role: "KAUR PERENCANAAN",
         img: "/perangkat_desa/kaur-perencanaan.jpg",
       },
