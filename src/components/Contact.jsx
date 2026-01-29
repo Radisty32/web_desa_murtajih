@@ -28,7 +28,9 @@ const Contact = () => {
                   </p>
                   <p>
                     <i className="bi bi-envelope-fill text-warning me-2"></i>
-                    {siteData.contact.email}
+                    <a href={`mailto:${siteData.contact.email}`} className="text-primary text-decoration-none">
+                      {siteData.contact.email}
+                    </a>
                   </p>
                   <div className="mt-3">
                     <h6 className="fw-bold mb-2">Ikuti Kami</h6>
