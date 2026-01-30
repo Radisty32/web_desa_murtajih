@@ -58,6 +58,14 @@ const Gallery = () => {
     setVisibleCount((prev) => prev + 6);
   };
 
+  const handleShowLess = () => {
+    setVisibleCount(3);
+    const gallerySection = document.getElementById("galeri");
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="galeri" className="py-5 bg-alt">
       <div className="container">
@@ -154,13 +162,19 @@ const Gallery = () => {
           )}
         </div>
 
-        {/* Load More Button */}
-        {filteredImages.length > visibleCount && (
+        {/* Load More Button / Show Less Button */}
+        {filteredImages.length > 3 && (
           <div className="row mt-4">
             <div className="col-12 text-center">
-              <button className="btn btn-outline-primary px-5 rounded-pill hover-scale" onClick={handleLoadMore}>
-                Lihat Lebih Banyak <i className="bi bi-arrow-down ms-2"></i>
-              </button>
+              {visibleCount < filteredImages.length ? (
+                <button className="btn btn-outline-primary px-5 rounded-pill hover-scale" onClick={handleLoadMore}>
+                  Lihat Lebih Banyak <i className="bi bi-arrow-down ms-2"></i>
+                </button>
+              ) : (
+                <button className="btn btn-outline-danger px-5 rounded-pill hover-scale" onClick={handleShowLess}>
+                  Lihat Lebih Sedikit <i className="bi bi-arrow-up ms-2"></i>
+                </button>
+              )}
             </div>
           </div>
         )}
